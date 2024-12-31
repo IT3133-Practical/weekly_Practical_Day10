@@ -18,3 +18,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+const Stack = createNavigativeStackNavigator();
+
+export default function App() {
+  const Stack = createNavigativeStackNavigator();
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Contact" component={ContactUs} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+}
